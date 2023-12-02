@@ -9,7 +9,7 @@ footer {
     margin: 10px;
 }
 
-nav {
+nav ol{
     font-family: "Righteous";
     display: flex;
     justify-content: center;
@@ -18,6 +18,7 @@ nav {
     font-size: 25px;
     padding: 0px;
     background-color: rgba(158, 158, 158, 0.586);
+    width: 100%;
 }
 
 .skip {
@@ -213,6 +214,15 @@ h2 {
     background-color: #555;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+    }
+    .btn {
+        transition: none;
+    }
+}
+
 @media screen and (min-width: 600px) {
     h1 {
         font-size: 55px;
@@ -220,8 +230,10 @@ h2 {
     h2{
         font-size: 30px;
     }
-    nav {
+    nav ol {
         font-size: 40px;
+        display: flex;
+        justify-content: space-around;
     }
     .flip-card {
         background-color: transparent !important;
@@ -298,11 +310,12 @@ h2 {
 }
 
 @media screen and (min-width: 900px) {
-    nav {
-        font-size: 30px;
+    nav ol {
+        font-size: 35px;
         display: flex;
-            justify-content: space-around;
+        justify-content: space-around;
     }
+
     h1 {
         font-size: 70px;
     }
